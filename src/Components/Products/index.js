@@ -19,6 +19,7 @@ export const Products =()=>{
         const response = await fetch("https://dummyjson.com/products");
         if(response.ok === true){
             const data = await response.json();
+            console.log(data);
             const copyList= [...data.products];
             const sortedList = copyList.sort((a,b)=>{
             return  Number(a.price)-Number(b.price) 
